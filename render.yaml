@@ -3,19 +3,33 @@ pullRequestPreviewsExpireAfterDays: 3
 services:
 - type: web
   plan: starter plus
-  previewEnvironmentPlan: starter
-  name: express-hello-world
+  previewPlan: starter
+  name: express-backend
   env: node
-  repo: https://github.com/render-examples/express-hello-world
-  buildCommand: yarn
-  startCommand: node app.js
+  buildCommand: cd backend && yarn
+  startCommand: cd backend && yarn start
   envVars:
   - key: MY_API_KEY
     value: production-api-key
-    previewEnviromentValue: test-api-key
+    previewValue: test-api-key
+  - key: DB_CONNECTION_STRING
+    fromDatabase:
+      name: postgres_db
+      property: connectionString
+- type: web
+  name: render-todo
+  env: static
+  buildCommand: cd frontend && yarn install && yarn build
+  staticPublishPath: ./frontend/build
+  envVars:
+  - key: REACT_APP_API_HOST
+    fromService:
+      type: web
+      name: express-backend
+      property: host
 databases:
-- name: my_test_db
+- name: postgres_db
   databaseName: test_db
   user: test_user
   plan: standard
-  previewEnvironmentPlan: starter
+  previewPlan: starter

@@ -1,0 +1,28 @@
+{
+  "name": "preview-environment",
+  "version": "1.0.0",
+  "description": "This is a sample repository to demonstrate how you can use preview environments with Render.  For more information on setting up preview environments, visit our [preview environment docs](https://render.com/docs/preview-environments).",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/render-examples/preview-environment.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/render-examples/preview-environment/issues"
+  },
+  "homepage": "https://github.com/render-examples/preview-environment#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "pg": "^8.4.1",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^6.3.5"
+  }
+}
