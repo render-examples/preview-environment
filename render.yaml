@@ -1,0 +1,21 @@
+pullRequestPreviewsEnabled: true
+pullRequestPreviewsExpireAfterDays: 3
+services:
+- type: web
+  plan: starter plus
+  previewEnvironmentPlan: starter
+  name: express-hello-world
+  env: node
+  repo: https://github.com/render-examples/express-hello-world
+  buildCommand: yarn
+  startCommand: node app.js
+  envVars:
+  - key: MY_API_KEY
+    value: production-api-key
+    previewEnviromentValue: test-api-key
+databases:
+- name: my_test_db
+  databaseName: test_db
+  user: test_user
+  plan: standard
+  previewEnvironmentPlan: starter
