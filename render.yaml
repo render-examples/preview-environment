@@ -1,5 +1,5 @@
-pullRequestPreviewsEnabled: true
-pullRequestPreviewsExpireAfterDays: 3
+previewsEnabled: true
+previewsExpireAfterDays: 3
 services:
 - type: web
   plan: starter plus
