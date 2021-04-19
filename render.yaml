@@ -9,6 +9,9 @@ services:
   buildCommand: cd backend && yarn
   startCommand: cd backend && yarn start
   envVars:
+  - key: MY_API_KEY2
+    value: production-api-key2
+    previewValue: test-api-key2
   - key: MY_API_KEY
     value: production-api-key
     previewValue: test-api-key
