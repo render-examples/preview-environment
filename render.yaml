@@ -18,7 +18,6 @@ services:
 - type: web
   name: render-todo
   env: static
-  plan: pro
   buildCommand: cd frontend && yarn install && yarn build
   staticPublishPath: ./frontend/build
   envVars:
