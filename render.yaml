@@ -3,7 +3,6 @@ previewsExpireAfterDays: 3
 services:
 - type: web
   plan: free
-  previewPlan: free
   name: express-backend
   env: node
   buildCommand: cd backend && yarn
@@ -33,4 +32,3 @@ databases:
   databaseName: test_db
   user: test_user
   plan: free
-  previewPlan: free
