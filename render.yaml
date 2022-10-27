@@ -16,7 +16,7 @@ services:
       name: postgres_db
       property: connectionString
 - type: web
-  plan: starter
+  plan: starter plus
   name: render-todo
   env: static
   buildCommand: cd frontend && yarn install && yarn build
