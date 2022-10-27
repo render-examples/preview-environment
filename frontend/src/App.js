@@ -68,10 +68,10 @@ function App() {
                 </div>
                 <div className="task-container">
                   <div className="task-wrapper">
-                      <input type="text" className="task-input w-input" onKeyPress={CheckKey} maxLength="256" name="name-5" data-name="Name 5" placeholder="enter a task description ..." id="name-5"/>
+                      <input type="text" className="task-input w-input" onKeyPress={CheckKey} maxLength="256" name="name-5" data-name="Name 5" placeholder="Enter a task description ..." id="name-5"/>
                   </div>
                   <a className="task-button w-inline-block" onClick={SubmitTodo}>
-                    <div>Add Task</div>
+                    <div style="font-weight: bold">Add Task</div>
                   </a>
                 </div>
                 <TodoList items={todos}/>
