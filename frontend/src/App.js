@@ -10,7 +10,7 @@ const baseUrl = 'https://' + process.env.REACT_APP_API_HOST + '.onrender.com'
 const ListItem = ({ title }) => {
   return (
       <div className="task-row"><img src={CheckIcon} alt="" className="task-check-icon"/>
-        <h3 className="task-text">{title}</h3>
+        <h3 className="task-text">"{title}"</h3>
       </div>
   )
 }
