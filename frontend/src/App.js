@@ -1,11 +1,15 @@
 import React, {useEffect, useState} from 'react';
+
+import LogoIcon from "./images/logo-icon.svg";
+import CheckIcon from "./images/group_4949.svg";
+
 import './App.css';
 
 const baseUrl = 'https://' + process.env.REACT_APP_API_HOST + '.onrender.com'
 
 const ListItem = ({ title }) => {
   return (
-      <div className="task-row"><img src={require("./images/group_4949.svg")} alt="" className="task-check-icon"/>
+      <div className="task-row"><img src={CheckIcon} alt="" className="task-check-icon"/>
         <h3 className="task-text">{title}</h3>
       </div>
   )
@@ -58,7 +62,7 @@ function App() {
           <div className="widget-body-2">
             <div className="w-form">
               <form id="email-form" name="email-form" data-name="Email Form" className="form">
-                <div className="task-title-group"><img src={require("./images/logo-icon.svg")} loading="lazy" alt="" className="task-logo"/>
+                <div className="task-title-group"><img src={LogoIcon} loading="lazy" alt="" className="task-logo"/>
                   <div className="task-overline">Powered by <a href="https://render.com">Render</a></div>
                   <h1 className="task-title">My Todo List</h1>
                 </div>

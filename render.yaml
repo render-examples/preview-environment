@@ -2,7 +2,7 @@ previewsEnabled: true
 previewsExpireAfterDays: 3
 services:
 - type: web
-  plan: starter plus
+  plan: standard
   previewPlan: starter
   name: express-backend
   env: node
