@@ -1,5 +1,5 @@
 previewsEnabled: true
-previewsExpireAfterDays: 3
+previewsExpireAfterDays: 1
 services:
 - type: web
   plan: standard
@@ -27,6 +27,11 @@ services:
       type: web
       name: express-backend
       property: host
+- type: private
+  name: memcached
+  env: image
+  image:
+    url: memcached
 databases:
 - name: postgres_db
   databaseName: test_db
