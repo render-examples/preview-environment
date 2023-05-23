@@ -27,7 +27,7 @@ services:
       type: web
       name: express-backend
       property: host
-- type: private
+- type: pserv
   name: memcached
   env: image
   image:
