@@ -77,7 +77,7 @@ function App() {
                 <TodoList items={todos}/>
               </form>
               <div className="w-form-done">
-                <div>Thank you! Your submission has been received!</div>
+                <div>GOT IT! Your submission has been received!</div>
               </div>
               <div className="w-form-fail">
                 <div>Oops! Something went wrong while submitting the form.</div>
