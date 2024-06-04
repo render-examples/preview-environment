@@ -63,7 +63,7 @@ function App() {
             <div className="w-form">
               <form id="email-form" name="email-form" data-name="Email Form" className="form">
                 <div className="task-title-group"><img src={LogoIcon} loading="lazy" alt="" className="task-logo"/>
-                  <div className="task-overline">Powered by <a href="https://render.com">Render</a></div>
+                  <div className="task-overline">Powred by <a href="https://render.com">Render</a></div>
                   <h1 className="task-title">Todo List</h1>
                 </div>
                 <div className="task-container">
