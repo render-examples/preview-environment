@@ -1,4 +1,5 @@
-previewsEnabled: true
+previews:
+  generation: automatic
 previewsExpireAfterDays: 3
 services:
 - type: web
