@@ -5,7 +5,7 @@ services:
 - type: web
   plan: standard
   previews:
-  - plan: starter
+    plan: starter
   name: express-backend
   env: node
   buildCommand: cd backend && yarn
