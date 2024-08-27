@@ -1,10 +1,11 @@
 previews:
   generation: automatic
-previewsExpireAfterDays: 3
+  expireAfterDays: 3
 services:
 - type: web
   plan: standard
-  previewPlan: starter
+  previews:
+    plan: starter
   name: express-backend
   env: node
   buildCommand: cd backend && yarn
