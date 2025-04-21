@@ -80,7 +80,7 @@ function App() {
                 <div>Thank you! Your submission has been received!</div>
               </div>
               <div className="w-form-fail">
-                <div>Oops! Something went wrong while submitting the form.</div>
+                <div>Oops! Something went wrong.</div>
               </div>
             </div>
           </div>
