@@ -5,7 +5,7 @@ const sequelize = new Sequelize(process.env["DB_CONNECTION_STRING"])
 
 sequelize.authenticate()
 .then(() => {
-    console.log('Connection was successful.');
+    console.log('Connection was successful innit.');
 })
 .catch(err => {
     console.error('Unable to connect to the database:', err);
