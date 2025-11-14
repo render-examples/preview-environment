@@ -1,11 +1,12 @@
 previews:
-  generation: automatic
-  expireAfterDays: 3
+  generation: manual
+  expireAfterDays: 2
+
 services:
 - type: web
-  plan: standard
+  plan: free
   previews:
-    plan: starter
+    plan: free
   name: express-backend
   env: node
   buildCommand: cd backend && yarn
@@ -20,6 +21,9 @@ services:
       property: connectionString
 - type: web
   name: render-todo
+  plan: free
+  previews:
+    plan: free
   env: static
   buildCommand: cd frontend && yarn install && yarn build
   staticPublishPath: ./frontend/build
@@ -33,5 +37,6 @@ databases:
 - name: postgres_db
   databaseName: test_db
   user: test_user
-  plan: standard
-  previewPlan: starter
+  plan: free
+  previews:
+    plan: free
