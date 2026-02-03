@@ -24,6 +24,8 @@ services:
   buildCommand: cd frontend && yarn install && yarn build
   staticPublishPath: ./frontend/build
   envVars:
+  - key: NODE_VERSION
+    value: 16
   - key: REACT_APP_API_HOST
     fromService:
       type: web
