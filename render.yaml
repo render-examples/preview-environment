@@ -3,11 +3,11 @@ previews:
   expireAfterDays: 3
 services:
 - type: web
-  plan: standard
+  plan: free
   previews:
     plan: starter
   name: express-backend
-  env: node
+  runtime: node
   buildCommand: cd backend && yarn
   startCommand: cd backend && yarn start
   envVars:
@@ -20,7 +20,7 @@ services:
       property: connectionString
 - type: web
   name: render-todo
-  env: static
+  runtime: static
   buildCommand: cd frontend && yarn install && yarn build
   staticPublishPath: ./frontend/build
   envVars:
@@ -33,5 +33,5 @@ databases:
 - name: postgres_db
   databaseName: test_db
   user: test_user
-  plan: standard
+  plan: free
   previewPlan: starter
