@@ -1,11 +1,13 @@
-previewsEnabled: true
-previewsExpireAfterDays: 3
+previews:
+  generation: automatic
+  expireAfterDays: 3
 services:
 - type: web
-  plan: starter plus
-  previewPlan: starter
+  plan: free
+  previews:
+    plan: starter
   name: express-backend
-  env: node
+  runtime: node
   buildCommand: cd backend && yarn
   startCommand: cd backend && yarn start
   envVars:
@@ -24,10 +26,12 @@ services:
       property: connectionString
 - type: web
   name: render-todo
-  env: static
+  runtime: static
   buildCommand: cd frontend && yarn install && yarn build
   staticPublishPath: ./frontend/build
   envVars:
+  - key: NODE_VERSION
+    value: 20
   - key: REACT_APP_API_HOST
     fromService:
       type: web
@@ -37,5 +41,5 @@ databases:
 - name: postgres_db
   databaseName: test_db
   user: test_user
-  plan: standard
-  previewPlan: starter
+  plan: Basic-1gb
+  previewPlan: basic-256mb
