@@ -35,5 +35,5 @@ databases:
 - name: postgres_db
   databaseName: test_db
   user: test_user
-  plan: free
+  plan: Basic-1gb
   previewPlan: basic-256mb
