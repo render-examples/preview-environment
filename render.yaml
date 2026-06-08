@@ -25,7 +25,7 @@ services:
   staticPublishPath: ./frontend/build
   envVars:
   - key: NODE_VERSION
-    value: 16
+    value: 20
   - key: REACT_APP_API_HOST
     fromService:
       type: web
